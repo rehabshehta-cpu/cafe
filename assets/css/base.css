@@ -1,0 +1,94 @@
+/* base.css — variables, reset, typography */
+:root {
+  --font-body: 'Tajawal', sans-serif;
+  --font-display: 'Amiri', serif;
+  --bg-primary: #1a1410;
+  --bg-secondary: #2a2018;
+  --bg-warm: #3d2e22;
+  --text-primary: #f5ebe0;
+  --text-secondary: #c4b5a5;
+  --text-muted: #8a7b6b;
+  --accent: #c8956c;
+  --accent-light: #e8b896;
+  --accent-dark: #8b5e3c;
+  --gold: #d4a574;
+  --glass-bg: rgba(255, 248, 240, 0.06);
+  --glass-border: rgba(255, 248, 240, 0.12);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --radius: 16px;
+  --radius-lg: 24px;
+  --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --nav-height: 72px;
+}
+
+body[data-mood="study"] { --bg-primary: #1a1814; --bg-secondary: #252018; --accent: #b8956a; --glass-bg: rgba(255,245,230,0.05); }
+body[data-mood="rain"] { --bg-primary: #141820; --bg-secondary: #1a2230; --accent: #7a9eb5; --glass-bg: rgba(200,220,240,0.05); }
+body[data-mood="focus"] { --bg-primary: #0f0e14; --bg-secondary: #1a1520; --accent: #9b7ec8; --glass-bg: rgba(180,160,220,0.05); }
+body[data-mood="relax"] { --bg-primary: #1a1410; --bg-secondary: #2a1f18; --accent: #d4a574; --glass-bg: rgba(255,230,200,0.07); }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  transition: background 0.8s ease;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  right: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+}
+.skip-link:focus { top: 1rem; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); border: 0;
+}
+
+.ambient-bg {
+  position: fixed; inset: 0; z-index: -1; overflow: hidden;
+  background: linear-gradient(160deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-warm) 100%);
+  transition: background 0.8s ease;
+}
+
+.ambient-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: floatOrb 20s ease-in-out infinite; }
+.orb-1 { width: 400px; height: 400px; background: var(--accent); top: -10%; right: -5%; }
+.orb-2 { width: 300px; height: 300px; background: var(--accent-dark); bottom: 20%; left: -10%; animation-delay: -7s; }
+.orb-3 { width: 250px; height: 250px; background: var(--gold); top: 50%; left: 40%; opacity: 0.2; animation-delay: -14s; }
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(30px,-40px) scale(1.1); }
+  66% { transform: translate(-20px,20px) scale(0.95); }
+}
+
+.rain-layer { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 0.8s; }
+body[data-mood="rain"] .rain-layer { opacity: 1; }
+.raindrop { position: absolute; width: 2px; height: 20px; background: linear-gradient(transparent, rgba(174,194,224,0.4)); animation: rainFall linear infinite; }
+@keyframes rainFall { 0% { transform: translateY(-100vh); opacity: 0; } 10% { opacity: 1; } 100% { transform: translateY(100vh); opacity: 0.3; } }
+
+.section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-tag { display: inline-block; font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem; }
+.section-header h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 0.75rem; }
+.section-desc { color: var(--text-secondary); max-width: 500px; margin: 0 auto; }
+
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--glass-border); }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }

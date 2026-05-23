@@ -1,0 +1,86 @@
+{
+  "hot": [
+    {
+      "id": "espresso",
+      "name": "إسبرesso",
+      "desc": "قهوة مركزة بنكهة غنية — للي بيحب القوة",
+      "price": 35,
+      "tags": ["strong"],
+      "image": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&q=80"
+    },
+    {
+      "id": "latte",
+      "name": "لاتيه",
+      "desc": "حليب مخفوق ناعم مع إسبرesso — دفء في كل رشفة",
+      "price": 45,
+      "tags": ["sweet"],
+      "image": "https://images.unsplash.com/photo-1561882468-894d41573339?w=400&q=80"
+    },
+    {
+      "id": "cappuccino",
+      "name": "كابتشينو",
+      "desc": "رغوة حريرية وتوازن مثالي بين القهوة والحليب",
+      "price": 42,
+      "tags": ["strong"],
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80"
+    },
+    {
+      "id": "turkish",
+      "name": "قهوة تركي",
+      "desc": "قهوة تقليدية بطعم أصيل — مع الهدوء",
+      "price": 30,
+      "tags": ["strong"],
+      "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80"
+    },
+    {
+      "id": "hot-chocolate",
+      "name": "شوكولاتة ساخنة",
+      "desc": "شوكولاتة بلجيكية غنية — راحة في كوب",
+      "price": 40,
+      "tags": ["sweet", "vegan"],
+      "image": "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=400&q=80"
+    },
+    {
+      "id": "tea",
+      "name": "شاي أعشاب",
+      "desc": "خلطة أعشاب هادئة — للمساء الهادئ",
+      "price": 25,
+      "tags": ["vegan"],
+      "image": "https://images.unsplash.com/photo-1597318184630-0c4f4e6c6f0?w=400&q=80"
+    }
+  ],
+  "dessert": [
+    {
+      "id": "croissant",
+      "name": "كرواسون",
+      "desc": "كرواسون فرنسي طازج — مقرمش من برا وناعم من جوا",
+      "price": 30,
+      "tags": ["sweet"],
+      "image": "https://i.postimg.cc/L8V3xDLW/34a059a12664dcae118986a011cd897c.jpg"
+    },
+    {
+      "id": "chocolate-cake",
+      "name": "كيكة شوكولاتة",
+      "desc": "كيكة شوكولاتة غنية — حلوى تستحق اللحظة",
+      "price": 50,
+      "tags": ["sweet"],
+      "image": "https://i.postimg.cc/pLBJsCz7/75841a7276c14f937cbce8a167e17d92.jpg"
+    },
+    {
+      "id": "cookies",
+      "name": "كوكيز",
+      "desc": "كوكيز بالشوكولاتة — مقرمش ودافي",
+      "price": 40,
+      "tags": ["sweet"],
+      "image": "https://i.postimg.cc/XYgksLds/db03e53c057449564a8c3f285d4ae705.jpg"
+    },
+    {
+      "id": "cheesecake",
+      "name": "تشيز كيك",
+      "desc": "تشيز كيك كريمي بنكهة الفانيليا",
+      "price": 55,
+      "tags": ["sweet"],
+      "image": "https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=400&q=80"
+    }
+  ]
+}

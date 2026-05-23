@@ -1,0 +1,19 @@
+{
+  "name": "فنجان هادي",
+  "short_name": "فنجان هادي",
+  "description": "كافيه هادئ للمذاكرة والتركيز",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1410",
+  "theme_color": "#1a1410",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "assets/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

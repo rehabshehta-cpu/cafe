@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="فنجان هادي — كافيه هادئ للمذاكرة والعمل والهدوء في القاهرة. قهوة مختصة، أجواء سكينة، ومؤقت تركيز.">
+  <meta name="theme-color" content="#1a1410">
+  <title>فنجان هادي | ملاذك الهادئ</title>
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/logo.svg">
+  <link rel="manifest" href="manifest.json">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="فنجان هادي | ملاذك الهادئ">
+  <meta property="og:description" content="كافيه هادئ للمذاكرة والعمل — قهوة مختصة وأجواء سكينة في القاهرة">
+  <meta property="og:image" content="assets/images/og-cover.svg">
+  <meta property="og:locale" content="ar_EG">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "فنجان هادي",
+    "description": "كافيه هادئ للمذاكرة والعمل والهدوء",
+    "address": { "@type": "PostalAddress", "addressLocality": "القاهرة", "addressCountry": "EG" },
+    "telephone": "+201012345678",
+    "email": "info@cafename.com",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "23:00"
+    },
+    "servesCuisine": "Coffee",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body data-mood="default">
+
+  <a href="#main" class="skip-link">تخطي إلى المحتوى</a>
+
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <img src="assets/images/logo.svg" alt="" class="preloader-logo">
+    <div class="preloader-steam"><span></span><span></span><span></span></div>
+    <p class="preloader-text">فنجان هادي</p>
+  </div>
+
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+    <div class="rain-layer" id="rainLayer"></div>
+  </div>
+
+  <nav class="navbar glass" aria-label="التنقل الرئيسي">
+    <a href="#hero" class="logo">
+      <img src="assets/images/logo.svg" alt="" width="36" height="36">
+      فنجان <span>هادي</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">من نحن</a></li>
+      <li><a href="#mood">المزاج</a></li>
+      <li><a href="#menu">المنيو</a></li>
+      <li><a href="#memories">ذكريات</a></li>
+      <li><a href="#focus">تركيز</a></li>
+      <li><a href="#contact">تواصل</a></li>
+    </ul>
+    <div class="nav-controls">
+      <div class="volume-control glass-sm">
+        <label for="volumeSlider" class="visually-hidden">مستوى الصوت</label>
+        <input type="range" id="volumeSlider" min="0" max="100" value="50" aria-label="مستوى الصوت">
+      </div>
+      <button class="music-toggle glass-sm" id="musicToggle" aria-label="تشغيل الموسيقى الهادئة" aria-pressed="false">
+        <svg class="music-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <span class="music-label">صوت هادئ</span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header id="hero" class="hero">
+      <div class="hero-content">
+        <p class="hero-tag">كافيه · هدوء · تركيز</p>
+        <h1 class="hero-title">فنجان قهوة…<br><em>وهدوء تستحقه</em></h1>
+        <p class="hero-sub">مكان هادئ للمذاكرة، العمل، والجلسات الهادية — حيث كل رشفة تمنحك لحظة سكينة.</p>
+        <div class="hero-actions">
+          <a href="#mood" class="btn btn-primary">اختر مزاجك</a>
+          <a href="#menu" class="btn btn-ghost">استكشف المنيو</a>
+        </div>
+        <div id="openStatus" class="open-status open">مفتوح الآن</div>
+      </div>
+      <div class="hero-visual">
+        <svg class="hero-cup-svg" viewBox="0 0 200 220" aria-hidden="true">
+          <ellipse cx="100" cy="195" rx="70" ry="10" fill="rgba(0,0,0,0.2)"/>
+          <ellipse cx="100" cy="185" rx="75" ry="12" fill="#ddd0c4"/>
+          <path d="M55 85 L55 160 Q55 175 100 175 Q145 175 145 160 L145 85 Z" fill="#f5ebe0" stroke="#e8d5c4" stroke-width="2"/>
+          <path d="M65 95 L65 105 Q100 115 135 105 L135 95 Q100 88 65 95" fill="#6b4423"/>
+          <path d="M145 110 Q175 110 175 135 Q175 155 145 155" fill="none" stroke="#e8d5c4" stroke-width="8" stroke-linecap="round"/>
+          <path class="steam-path" d="M85 75 Q80 55 85 40" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="round"/>
+          <path class="steam-path" d="M100 70 Q95 48 100 32" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="5" stroke-linecap="round"/>
+          <path class="steam-path" d="M115 75 Q120 55 115 40" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">
+        <span>اكتشف المزيد</span>
+        <div class="scroll-line"></div>
+      </div>
+    </header>
+
+    <section id="about" class="section about">
+      <div class="section-header reveal">
+        <span class="section-tag">(نبذة عن المكان)</span>
+        <h2>من نحن</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text glass reveal">
+          <p>في <strong>فنجان هادي</strong> بنؤمن إن القهوة مش مجرد مشروب — هي لحظة هدوء وسط زحمة الحياة.</p>
+          <p>بنقدّم قهوة مختارة بعناية، في مكان مريح يساعدك تركز، تشتغل، أو تستمتع بوقتك.</p>
+          <blockquote class="about-quote" id="moodQuote">«الهدوء يبدأ من فنجان واحد»</blockquote>
+        </div>
+        <div class="about-features reveal">
+          <div class="feature-card glass">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            <h3>للمذاكرة</h3>
+            <p>إضاءة دافئة ومساحات هادئة للتركيز</p>
+          </div>
+          <div class="feature-card glass">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <h3>للعمل</h3>
+            <p>واي فاي سريع ومقابس في كل مكان</p>
+          </div>
+          <div class="feature-card glass">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            <h3>للاسترخاء</h3>
+            <p>موسيقى خفيفة وأجواء مريحة</p>
+          </div>
+          <div class="feature-card glass">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>
+            <h3>للمحبين</h3>
+            <p>قهوة مختصة وحلويات طازة يومياً</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="section-header reveal">
+        <span class="section-tag">معرض المكان</span>
+        <h2>أجواء فنجان هادي</h2>
+      </div>
+      <div class="cafe-gallery reveal" id="cafeGallery"></div>
+    </section>
+
+    <section id="mood" class="section mood-section">
+      <div class="section-header reveal">
+        <span class="section-tag">تجربة تفاعلية</span>
+        <h2>اختر مزاجك</h2>
+        <p class="section-desc">غيّر الأجواء — خلفية، أصوات، ورسالة تناسب لحظتك</p>
+      </div>
+      <div class="mood-grid reveal">
+        <button class="mood-card glass" data-mood="study" aria-pressed="false">
+          <span class="mood-icon">📚</span>
+          <h3>وضع المذاكرة</h3>
+          <p>تركيز هادئ مع أصوات مكتبة</p>
+        </button>
+        <button class="mood-card glass" data-mood="rain" aria-pressed="false">
+          <span class="mood-icon">🌧️</span>
+          <h3>وضع المطر</h3>
+          <p>مطر ناعم ودفء فنجان القهوة</p>
+        </button>
+        <button class="mood-card glass" data-mood="focus" aria-pressed="false">
+          <span class="mood-icon">🌙</span>
+          <h3>تركيز عميق</h3>
+          <p>ظلام دافئ وصوت بعيد</p>
+        </button>
+        <button class="mood-card glass" data-mood="relax" aria-pressed="false">
+          <span class="mood-icon">☕</span>
+          <h3>وضع الاسترخاء</h3>
+          <p>دفء القهوة وموسيقى هادئة</p>
+        </button>
+      </div>
+      <div class="mood-active glass reveal" id="moodActive" hidden>
+        <span class="mood-active-label">المزاج الحالي:</span>
+        <span id="moodActiveName">—</span>
+        <button class="btn btn-ghost btn-sm" id="resetMood">إعادة ضبط</button>
+      </div>
+    </section>
+
+    <section id="menu" class="section menu-section">
+      <div class="section-header reveal">
+        <span class="section-tag">المنيو</span>
+        <h2>قائمة الهدوء</h2>
+        <p class="section-desc">ابحث واختر مشروبك أو حلوياتك المفضلة</p>
+      </div>
+      <div class="menu-toolbar reveal">
+        <input type="search" id="menuSearch" class="menu-search" placeholder="ابحث في المنيو…" aria-label="بحث في المنيو">
+        <div class="menu-tabs">
+          <button class="menu-tab active" data-category="hot">مشروبات ساخنة</button>
+          <button class="menu-tab" data-category="dessert">حلويات</button>
+        </div>
+      </div>
+      <div class="menu-grid reveal" id="menuGrid"></div>
+      <button class="order-fab glass" id="orderFab" aria-label="عرض الطلب">
+        <span class="order-count" id="orderCount">0</span>
+        ☕ طلبك الهادئ
+      </button>
+    </section>
+
+    <section id="memories" class="section memories-section">
+      <div class="section-header reveal">
+        <span class="section-tag">ذكريات المكان</span>
+        <h2>حائط الذكريات</h2>
+        <p class="section-desc">ارفع صورة لذكرى حبيتها (حد أقصى ٥ ميجابايت)</p>
+      </div>
+      <div class="memory-upload glass reveal">
+        <label for="memoryUpload" class="upload-zone" id="uploadZone">
+          <span class="upload-icon">📷</span>
+          <span>اسحب صورتك هنا أو اضغط للرفع</span>
+          <input type="file" id="memoryUpload" accept="image/*" hidden>
+        </label>
+      </div>
+      <div class="memory-gallery reveal" id="memoryGallery">
+        <p class="gallery-empty" id="galleryEmpty">لا توجد ذكريات بعد — كن أول من يشارك!</p>
+      </div>
+    </section>
+
+    <section id="calm" class="section calm-section">
+      <div class="calm-card glass reveal">
+        <span class="section-tag">رسالة اليوم</span>
+        <h2>مولّد الهدوء</h2>
+        <p class="calm-message" id="calmMessage" aria-live="polite">اضغط لتستلم رسالة سكينة…</p>
+        <div class="btn-group">
+          <button class="btn btn-primary" id="generateCalm">✨ رسالة جديدة</button>
+          <button class="btn btn-ghost" id="copyCalm">نسخ</button>
+          <button class="btn btn-ghost" id="shareCalm">مشاركة</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus" class="section focus-section">
+      <div class="section-header reveal">
+        <span class="section-tag">أداة التركيز</span>
+        <h2>مؤقت بومودورو</h2>
+        <p class="section-desc">اختر مدة التركيز وابدأ جلستك الهادئة</p>
+      </div>
+      <div class="pomodoro glass reveal">
+        <div class="pomo-durations">
+          <button class="pomo-duration active" data-minutes="25">٢٥ د</button>
+          <button class="pomo-duration" data-minutes="45">٤٥ د</button>
+          <button class="pomo-duration" data-minutes="60">٦٠ د</button>
+        </div>
+        <div class="pomo-ring">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="pomo-bg" cx="100" cy="100" r="90"/>
+            <circle class="pomo-progress" id="pomoProgress" cx="100" cy="100" r="90"/>
+          </svg>
+          <div class="pomo-time">
+            <span id="pomoDisplay" aria-live="polite">25:00</span>
+            <span class="pomo-mode" id="pomoMode">تركيز</span>
+          </div>
+        </div>
+        <div class="pomo-controls">
+          <button class="btn btn-primary" id="pomoStart">ابدأ</button>
+          <button class="btn btn-ghost" id="pomoReset">إعادة</button>
+        </div>
+        <div class="pomo-sessions">
+          <span>جلسات مكتملة:</span>
+          <div class="session-dots" id="sessionDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-header reveal">
+        <span class="section-tag">تواصل معنا</span>
+        <h2>نحن في انتظارك</h2>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="contact-info glass">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong>العنوان</strong>
+              <p id="contactAddress">القاهرة – مصر</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div>
+              <strong>الهاتف</strong>
+              <p id="contactPhone" dir="ltr">01012345678</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <div>
+              <strong>البريد الإلكتروني</strong>
+              <p id="contactEmail" dir="ltr">info@cafename.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div>
+              <strong>ساعات العمل</strong>
+              <p id="contactHours">يومياً 08:00 – 23:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="social-links glass">
+          <h3>تابعنا</h3>
+          <div class="social-grid" id="socialGrid"></div>
+        </div>
+      </div>
+      <div class="testimonials reveal">
+        <h3 class="section-tag" style="text-align:center;display:block;margin-bottom:1rem">آراء الزوار</h3>
+        <div class="testimonials-track" id="testimonialsTrack"></div>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe id="mapFrame" title="موقع فنجان هادي على الخريطة" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 فنجان هادي – جميع الحقوق محفوظة</p>
+  </footer>
+
+  <div class="modal-overlay" id="itemModal" aria-hidden="true">
+    <div class="modal glass" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="إغلاق">&times;</button>
+      <div class="modal-image-wrap">
+        <img id="modalImage" src="" alt="" width="480" height="240">
+      </div>
+      <div class="modal-body">
+        <div id="modalTags"></div>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <div class="modal-options">
+          <div class="size-options">
+            <label><input type="radio" name="size" value="small"> صغير</label>
+            <label><input type="radio" name="size" value="regular" checked> عادي</label>
+            <label><input type="radio" name="size" value="large"> كبير (+١٠ ج)</label>
+          </div>
+          <div class="qty-control">
+            <button type="button" id="qtyMinus" aria-label="تقليل">−</button>
+            <input type="number" id="modalQty" value="1" min="1" max="10" aria-label="الكمية">
+            <button type="button" id="qtyPlus" aria-label="زيادة">+</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <span class="modal-price" id="modalPrice"></span>
+          <button class="btn btn-primary" id="modalAdd">أضف للطلب ☕</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="order-panel glass" id="orderPanel" aria-hidden="true" role="dialog" aria-modal="true" aria-label="سلة الطلب">
+    <div class="order-header">
+      <h3>☕ طلبك الهادئ</h3>
+      <button class="modal-close" id="orderClose" aria-label="إغلاق">&times;</button>
+    </div>
+    <ul class="order-list" id="orderList"></ul>
+    <div class="order-total">
+      <span>الإجمالي</span>
+      <span id="orderTotal">0 جنيه</span>
+    </div>
+    <button class="btn btn-primary btn-block" id="orderConfirm">إرسال عبر واتساب</button>
+  </div>
+  <div class="order-backdrop" id="orderBackdrop"></div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="عرض الصورة">
+    <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق">&times;</button>
+    <img id="lightboxImage" src="" alt="ذكرى في فنجان هادي">
+  </div>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

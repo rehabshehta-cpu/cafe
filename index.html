@@ -390,6 +390,25 @@
     <img id="lightboxImage" src="" alt="ذكرى في فنجان هادي">
   </div>
 
+  <div id="fileProtocolWarning" class="file-warning" hidden>
+    <div class="file-warning-box glass">
+      <h2>☕ لا يمكن تشغيل الموقع مباشرة</h2>
+      <p>المتصفح يمنع JavaScript modules عند فتح الملف من الجهاز (<code>file://</code>).</p>
+      <p><strong>الحل:</strong> شغّل السيرفر المحلي ثم افتح الرابط:</p>
+      <ol>
+        <li>اضغط دبل كليك على <code>start.bat</code> في مجلد المشروع</li>
+        <li>أو نفّذ: <code>npx serve -l 8080 .</code></li>
+        <li>افتح: <a href="http://localhost:8080">http://localhost:8080</a></li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    if (location.protocol === 'file:') {
+      document.getElementById('fileProtocolWarning').hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+  </script>
   <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

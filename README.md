@@ -26,14 +26,20 @@
 
 ## التشغيل المحلي
 
-> ES Modules تحتاج سيرفر محلي — لا تفتح `index.html` مباشرة.
+> **لا تفتح `index.html` بالدبل كليك** — المتصفح يمنع ES Modules عبر `file://` (خطأ CORS).
+
+### الطريقة الأسهل
+
+**دبل كليك على `start.bat`** — هيفتح السيرفر والموقع تلقائياً.
+
+### يدوياً
 
 ```bash
 # Python
 python -m http.server 8080
 
 # Node.js
-npx serve .
+npx serve -l 8080 .
 ```
 
 ثم افتح: `http://localhost:8080`

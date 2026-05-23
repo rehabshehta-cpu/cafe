@@ -70,13 +70,16 @@ cafe/
 
 عدّل [`assets/data/menu.json`](assets/data/menu.json) لتحديث المنيو.
 
-## النشر
+## النشر على GitHub Pages (مرة واحدة)
 
-### GitHub Pages
+1. افتح: **https://github.com/rehabshehta-cpu/cafe/settings/pages**
+2. **Build and deployment → Source:** اختر **Deploy from a branch**
+3. **Branch:** `main` — **Folder:** `/ (root)` — **Save**
+4. انتظر 1–2 دقيقة
 
-1. ارفع الم repo على GitHub
-2. Settings → Pages → Source: main branch
-3. حدّث `sitemap.xml` و `robots.txt` برابطك
+**رابط الموقع:** https://rehabshehta-cpu.github.io/cafe/
+
+> لا تستخدم GitHub Actions للنشر — اختر **Deploy from a branch** فقط.
 
 ### Netlify
 
@@ -86,7 +89,7 @@ npx netlify deploy --prod --dir=.
 
 ## Live Demo
 
-> أضف رابط الـ demo بعد النشر
+https://rehabshehta-cpu.github.io/cafe/
 
 ---
 
